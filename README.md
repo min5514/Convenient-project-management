@@ -2,9 +2,9 @@
 =
 我的世界 1.21.4
 
-Fabric 0.119.2
+Fabric > 0.119.2
 
-loader_version>0.16.14
+loader_version > 0.16.14
 
 仅限于服务器！
 
@@ -18,17 +18,13 @@ loader_version>0.16.14
 
 添加项目到列表
 -
-/wcc add project_name player  ~ ~ ~ dimension
+/wcc add project_name player
 
 
 
 project_name项目的名称
 
-player假人的名称（请开启bot前缀）
-
-~ ~ ~项目的坐标
-
-dimension项目的维度
+player假人的名称
 
 展开项目列表
 -
