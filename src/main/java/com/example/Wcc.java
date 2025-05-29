@@ -1,7 +1,6 @@
 package com.example;
 
 import com.example.commands.WccCommand;
-import com.example.commands.WccExecutes;
 import com.example.datas.WccDataCopy;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
@@ -18,6 +17,5 @@ public class Wcc implements ModInitializer {
 			WccDataCopy.Copy();
 		});
 		WccCommand.project_list();
-		WccExecutes.tellraw();
 	}
 }

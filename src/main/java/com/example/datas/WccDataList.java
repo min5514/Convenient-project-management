@@ -13,6 +13,12 @@ public class WccDataList {
             list.add(ProjectData);
             data.setList(list);
             project_data.saveData(dataFile, data);
+        }else {
+            ArrayList<Map<String, Object>> list = new ArrayList<>();
+            WccData data = new WccData();
+            list.add(ProjectData);
+            data.setList(list);
+            project_data.saveData(dataFile, data);
         }
     }
     public static void remove(int pach,Path dataFile){

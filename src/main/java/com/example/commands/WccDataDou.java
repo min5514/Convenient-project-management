@@ -20,7 +20,7 @@ public class WccDataDou {
         player_name.delete(player_name.indexOf("'/"),player_name.length());
         return player_name;
     }
-    public static StringBuilder dimension_dou(RegistryKey<World> Rdimension){
+    public static StringBuilder dimension_dou(String Rdimension){
         StringBuilder dimension =new StringBuilder();
         dimension.append(Rdimension);
         dimension.delete(0,34);
