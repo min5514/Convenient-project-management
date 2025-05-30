@@ -1,4 +1,5 @@
 package com.example.commands;
+import com.example.Wcc;
 import com.example.datas.WccData;
 import com.example.datas.WccDataList;
 import com.example.datas.project_data;
@@ -32,8 +33,9 @@ public class WccCommand {
                                         WccData loadedData = project_data.loadedData(dataFile, WccData.class);
                                         if (loadedData != null) {
                                             ArrayList<Map<String, Object>> list = loadedData.getList();
-                                            ServerPlayerEntity  Rplayer_name = context.getSource().getPlayer();
-                                            StringBuilder player =WccDataDou.player_name_dou(Rplayer_name);
+
+                                            String player = context.getSource().getName();
+
                                             context.getSource().sendMessage(Text.of("======以下是已储存的项目列表======"));
                                             for (int i = 0; i < loadedData.getList().size(); i++) {
                                                 Map<String, Object> data = list.get(i);
@@ -146,8 +148,7 @@ public class WccCommand {
                                         WccData loadedData = project_data.loadedData(dataFile, WccData.class);
                                         if (loadedData != null) {
                                             ArrayList<Map<String, Object>> pach_data = loadedData.getList();
-                                            ServerPlayerEntity  Rplayer_name = context.getSource().getPlayer();
-                                            StringBuilder player =WccDataDou.player_name_dou(Rplayer_name);
+                                            String player = context.getSource().getName();
                                             context.getSource().sendMessage(Text.of("=======选择项目删除======="));
                                             for (int i = 0; i < pach_data.size(); i++) {
 
@@ -188,8 +189,7 @@ public class WccCommand {
                                                         Text Rproject_name = MessageArgumentType.getMessage(context,"project_name");
                                                         StringBuilder project_name =WccDataDou.project_name_dou(Rproject_name);
 
-                                                        ServerPlayerEntity Rplayer_name = context.getSource().getPlayer();
-                                                        StringBuilder player =WccDataDou.player_name_dou(Rplayer_name);
+                                                        String player = context.getSource().getName();
 
                                                         ArrayList<Map<String, Object>> list = null;
                                                         if (loadedData != null) {
